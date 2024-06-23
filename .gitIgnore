@@ -1,6 +1,6 @@
-/target/
+target/
 .project
 .classpath
-/test-output/
+test-output/
 /Reports/
 .settings/

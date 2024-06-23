@@ -2,24 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-23T11:39:34Z" name="Default suite" finished-at="2024-06-23T11:41:54Z" duration-ms="140358">
+  <suite started-at="2024-06-23T14:55:08Z" name="Default suite" finished-at="2024-06-23T14:55:13Z" duration-ms="5376">
     <groups>
     </groups>
-    <test started-at="2024-06-23T11:39:34Z" name="Default test" finished-at="2024-06-23T11:41:54Z" duration-ms="140358">
-      <class name="SeleniumFileManagement.FileDownload">
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:SeleniumFileManagement.FileDownload@60856961]" started-at="2024-06-23T11:39:34Z" name="setUpBrowser" finished-at="2024-06-23T11:39:36Z" duration-ms="1598" status="PASS">
+    <test started-at="2024-06-23T14:55:08Z" name="Default test" finished-at="2024-06-23T14:55:13Z" duration-ms="5376">
+      <class name="SeleniumFileManagement.FileDownloadTestInEdge">
+        <test-method signature="verifyFileDownloadInEdgeBrowser()[pri:0, instance:SeleniumFileManagement.FileDownloadTestInEdge@7efaad5a]" started-at="2024-06-23T14:55:08Z" name="verifyFileDownloadInEdgeBrowser" finished-at="2024-06-23T14:55:13Z" duration-ms="5362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpBrowser -->
-        <test-method signature="verifyFileDownload()[pri:0, instance:SeleniumFileManagement.FileDownload@60856961]" started-at="2024-06-23T11:39:36Z" name="verifyFileDownload" description="Verify file download" finished-at="2024-06-23T11:41:54Z" duration-ms="138648" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFileDownload -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SeleniumFileManagement.FileDownload@60856961]" started-at="2024-06-23T11:41:54Z" name="tearDown" finished-at="2024-06-23T11:41:54Z" duration-ms="88" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- SeleniumFileManagement.FileDownload -->
+        </test-method> <!-- verifyFileDownloadInEdgeBrowser -->
+      </class> <!-- SeleniumFileManagement.FileDownloadTestInEdge -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

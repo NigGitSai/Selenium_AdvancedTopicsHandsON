@@ -22,7 +22,7 @@ public class FileDownload {
 		 HashMap<String,Object> prefs = new HashMap<String,Object>();
 		 prefs.put("download.default_directory", System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
 		 prefs.put("download.prompt_for_download", false);
-		 prefs.put("plugin.always_open_pdf_externally", true);
+		 prefs.put("plugin.always_open_pdf_externally", false);
 		 ChromeOptions opt = new ChromeOptions();
 		 opt.setExperimentalOption("prefs", prefs);
 		

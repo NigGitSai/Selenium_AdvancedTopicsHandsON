@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumFileManagement.FileUpload">
+      <class name="SeleniumFileManagement.FileDownloadTestInFirefox">
         <methods>
-          <include name="setUpBrowser"/>
-          <include name="tearDown"/>
-          <include name="fileUploadUsingRobot"/>
+          <include name="verifyFirefoxDownload"/>
         </methods>
-      </class> <!-- SeleniumFileManagement.FileUpload -->
+      </class> <!-- SeleniumFileManagement.FileDownloadTestInFirefox -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
