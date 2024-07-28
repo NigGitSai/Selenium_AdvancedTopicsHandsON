@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumFileManagement.FileDownloadTestInFirefox">
+      <class name="PDFValidation.PDFValidationTest">
         <methods>
-          <include name="verifyFirefoxDownload"/>
+          <include name="pdfValidationTestOnline"/>
         </methods>
-      </class> <!-- SeleniumFileManagement.FileDownloadTestInFirefox -->
+      </class> <!-- PDFValidation.PDFValidationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
