@@ -29,7 +29,7 @@ public class CalendarDatePickerTest {
 		 String targetDate = "10/02/2023";
 		 SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
 		 
-		 Date reqDate = formdat.parse(targetDate);
+		 Date reqDate = format.parse(targetDate);
 		 format.setLenient(false);
 		 Calendar cal = Calendar.getInstance();
 		 cal.setTime(reqDate);
