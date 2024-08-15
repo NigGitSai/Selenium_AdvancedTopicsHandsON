@@ -45,7 +45,8 @@ public class RelativeLocatorTest {
 		
 		//near
 		WebElement searchInput = driver.findElement(By.name("q"));
-		driver.findElement(RelativeLocator.with(By.tagName("input")).near(searchInput)).click();
+		//driver.findElement(RelativeLocator.with(By.tagName("input")).near(searchInput)).click();
+		driver.findElement(RelativeLocator.with(By.tagName("input")).near(searchInput,100)).click();
 		
 		String sorryText =driver.findElement(By.xpath("(//div[@class='status-msg-wrap']/div)[1]")).getText();
 		System.out.println(sorryText);

@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,10 @@ public class FileDownloadTestInFirefox {
 		
 		profile.setPreference("browser.download.dir", System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
 		profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf,application/excel,application/vnd.ms-excel,application/x-excel,application/x-msexcel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-		FirefoxDriver driver = new FirefoxDriver();
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.setProfile(profile);
+		
+		FirefoxDriver driver = new FirefoxDriver(opt);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://letcode.in/file");
