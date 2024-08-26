@@ -11,7 +11,7 @@ public class FindPair {
 		int[] a = {23,12,5,-2,11,0,43,24};
 		
 		int sum = 54;
-		
+		 outerLoop:
 		for(int i=0;i<a.length;i++)
 		{
 			for(int j=i+1;j<a.length;j++)
@@ -20,7 +20,7 @@ public class FindPair {
 				if(a[i]+a[j]==sum)
 				{
 					System.out.println("The pair of elements which equals to "+sum+" is "+a[i]+" and "+a[j]);
-					break;
+					break outerLoop;
 				}
 			}
 		}

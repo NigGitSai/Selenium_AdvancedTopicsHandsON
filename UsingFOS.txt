@@ -1,0 +1,1 @@
+Selenium WebDriver, a collection of language specific bindings to drive a browser - the way it is meant to be driven.
