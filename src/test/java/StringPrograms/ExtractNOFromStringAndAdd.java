@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class ExtractNOFromStringAndAdd {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public  void usingCharacterIsDigitMethod() {
 		// TODO Auto-generated method stub
 		
@@ -30,27 +30,5 @@ public class ExtractNOFromStringAndAdd {
 
 	}
 	
-	@Test(enabled = true)
 	
-	public static void extractNOFromString()
-	{
-	String given = "12MondayTest10";
-		
-		int total =0;
-		char ch;
-		for(int i=0;i<given.length();i++)
-		{
-			ch = given.charAt(i);
-			Pattern pattern = Pattern.compile("\\d+");
-				Matcher matcher = pattern.matcher(given);
-				while(matcher.find())
-				{
-					System.out.println(matcher.group());
-					total = total+Integer.parseInt(matcher.group());
-				}
-	}
-		System.out.println("total is "+total);
-	}
-	
-
 }
