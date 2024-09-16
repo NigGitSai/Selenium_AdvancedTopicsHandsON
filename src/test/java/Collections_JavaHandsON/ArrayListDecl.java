@@ -9,7 +9,7 @@ public class ArrayListDecl {
 		// TODO Auto-generated method stub
 		
 		//Without generics
-		List li = new ArrayList();
+		List li = new ArrayList<>();
 		
 		li.add(3);
 		li.add("fruit");

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PDFValidation.PDFValidationTest">
+      <class name="RestAssured.DeleteRequestWOBDDStyle">
         <methods>
-          <include name="pdfValidationTestOnline"/>
+          <include name="deleteRequestWOBDDStyle"/>
         </methods>
-      </class> <!-- PDFValidation.PDFValidationTest -->
+      </class> <!-- RestAssured.DeleteRequestWOBDDStyle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

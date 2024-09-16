@@ -1,5 +1,6 @@
 package JavaScriptExecutor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,9 +25,9 @@ public class ScrollTest {
 		Thread.sleep(2000);
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 		
-		driver.findElementByLinkText("Phones & PDAs").click();
+		driver.findElement(By.linkText("Phones & PDAs")).click();
 		
-		WebElement palmTreeAddToCart = driver.findElementByXPath("//a[text()='Palm Treo Pro']/../../..//button[@title='Add to Cart']");
+		WebElement palmTreeAddToCart = driver.findElement(By.linkText("//a[text()='Palm Treo Pro']/../../..//button[@title='Add to Cart']"));
 		
 		js.executeScript("arguments[0].scrollIntoView();", palmTreeAddToCart);
 		

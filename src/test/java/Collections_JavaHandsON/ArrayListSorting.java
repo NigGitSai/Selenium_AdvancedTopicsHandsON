@@ -1,6 +1,7 @@
 package Collections_JavaHandsON;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,6 +25,8 @@ public class ArrayListSorting {
 		Collections.sort(al);
 		System.out.println(al);
 		
+		Collections.sort(al,Collections.reverseOrder());
+		System.out.println(al);
 		
 	}
 
