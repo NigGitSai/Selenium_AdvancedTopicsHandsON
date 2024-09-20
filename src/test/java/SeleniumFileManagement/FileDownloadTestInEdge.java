@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.microsoft.edge.seleniumtools.EdgeDriver;
@@ -35,7 +36,7 @@ public class FileDownloadTestInEdge {
 		driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 driver.get("https://letcode.in/file");
-			driver.findElementById("pdf").click();
+			driver.findElement(By.id("pdf")).click();
 			
 			File folderPath = new File(System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
 			

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssured.DeleteRequestWOBDDStyle">
+      <class name="RestAssured.ReadJSONParametersUsingJaywayJSON">
         <methods>
-          <include name="deleteRequestWOBDDStyle"/>
+          <include name="verifyJSONParameterUsingJaywayJSONPath"/>
         </methods>
-      </class> <!-- RestAssured.DeleteRequestWOBDDStyle -->
+      </class> <!-- RestAssured.ReadJSONParametersUsingJaywayJSON -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

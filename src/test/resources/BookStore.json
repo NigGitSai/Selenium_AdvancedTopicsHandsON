@@ -1,0 +1,41 @@
+{
+  "store": {
+    "book": [
+      { 
+        "category": "fiction",
+        "author": "George Orwell",
+        "title": "1984",
+        "price": 8.99,
+        "rating": 4.7
+      },
+      { 
+        "category": "fiction",
+        "author": "Harper Lee",
+        "title": "To Kill a Mockingbird",
+        "price": 7.99,
+        "rating": 4.8
+      },
+      { 
+        "category": "fiction",
+        "author": "J.R.R. Tolkien",
+        "title": "The Hobbit",
+        "price": 10.99,
+        "rating": 4.9
+      },
+      { 
+        "category": "non-fiction",
+        "author": "Yuval Noah Harari",
+        "title": "Sapiens",
+        "price": 12.99,
+        "rating": 4.6
+      },
+      { 
+        "category": "non-fiction",
+        "author": "Michelle Obama",
+        "title": "Becoming",
+        "price": 11.99,
+        "rating": 4.9
+      }
+    ]
+  }
+}
