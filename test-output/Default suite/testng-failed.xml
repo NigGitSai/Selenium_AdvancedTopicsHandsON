@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssured.ReadJSONParametersUsingJaywayJSON">
+      <class name="RestAssured.DeserializationUsingJaywayJSONPath">
         <methods>
-          <include name="verifyJSONParameterUsingJaywayJSONPath"/>
+          <include name="deserializeUsingJaywayJSONPath"/>
         </methods>
-      </class> <!-- RestAssured.ReadJSONParametersUsingJaywayJSON -->
+      </class> <!-- RestAssured.DeserializationUsingJaywayJSONPath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

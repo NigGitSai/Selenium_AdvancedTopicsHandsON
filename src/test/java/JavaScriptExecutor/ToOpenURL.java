@@ -1,7 +1,9 @@
 package JavaScriptExecutor;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,13 +22,15 @@ public class ToOpenURL {
 		ChromeDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.location= 'https://demo.opencart.com/'");
+
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement checkout = driver.findElementByXPath("//a[@title='Checkout']");
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		WebElement checkout = driver.findElement(By.xpath("//a[@title='Checkout']"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(checkout));
-		
+
 		js.executeScript("arguments[0].setAttribute('style','border:2px solid red;background:2px solid yellow;');", checkout);
-		
+
 	}
 }

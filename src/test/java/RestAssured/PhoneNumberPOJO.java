@@ -4,6 +4,8 @@ public class PhoneNumberPOJO {
 
 	private String type;
 	private String number;
+	
+	
 	public String getType() {
 		return type;
 	}
@@ -16,6 +18,8 @@ public class PhoneNumberPOJO {
 	public void setNumber(String number) {
 		this.number = number;
 	}
+	
+	
 	
 	
 }

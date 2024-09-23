@@ -28,6 +28,7 @@ public class SchemaValidationUsingMatchesJSONSchema {
 			.log()
 			.all()
 			.body(JsonSchemaValidator.matchesJsonSchema(ip))
+			
 			.assertThat()
 			.statusCode(200);
 			

@@ -1,9 +1,11 @@
 package SeleniumFileManagement;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
@@ -29,7 +31,7 @@ public class FileDownload {
 		 WebDriverManager.chromedriver().setup(); 
 		 driver = new ChromeDriver(opt);
 		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 	}
 	
@@ -37,7 +39,7 @@ public class FileDownload {
 	public void verifyFileDownload()
 	{
 		driver.get("https://letcode.in/file");
-		driver.findElementById("xls").click();
+		driver.findElement(By.id("xls")).click();
 		
 		File folderPath = new File( System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
 		File[] lstFiles = folderPath.listFiles();

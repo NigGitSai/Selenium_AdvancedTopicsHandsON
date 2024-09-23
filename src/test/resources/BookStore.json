@@ -36,6 +36,19 @@
         "price": 11.99,
         "rating": 4.9
       }
-    ]
-  }
+    ],
+    "bicycle": {
+      "color": "red",
+      "price": 299.99,
+      "specs": {
+        "type": "mountain",
+        "wheelSize": 26,
+        "gears": 21
+      }
+    }
+    
+  },
+  
+  "storeOpen": true,
+  "location": "Main Street 123"
 }

@@ -1,5 +1,6 @@
 package JavaScriptExecutor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,7 @@ public class ZoomINZoomOut {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
-		WebElement signUp = driver.findElementByXPath("//a[text()='Sign up']");
+		WebElement signUp = driver.findElement(By.xpath("//a[text()='Sign up']"));
 		js.executeScript("arguments[0].setAttribute('style','background:yellow;border:3px solid red;')", signUp);
 		js.executeScript("document.body.style.zoom='60%';");
 		

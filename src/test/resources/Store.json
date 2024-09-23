@@ -1,0 +1,35 @@
+{
+  "store": {
+    "name": "Techie Gadgets",
+    "location": {
+      "street": "456 Tech Avenue",
+      "city": "San Francisco",
+      "postalCode": "94103"
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "Laptop",
+        "price": 999.99,
+        "available": true
+      },
+      {
+        "id": 2,
+        "name": "Smartphone",
+        "price": 699.99,
+        "available": false
+      },
+      {
+        "id": 3,
+        "name": "Tablet",
+        "price": 399.99,
+        "available": true
+      }
+    ],
+    "staff": [
+      "John Doe",
+      "Jane Smith",
+      "Tom Brown"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 package JavaScriptExecutor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ public class ToRefreshPage {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		
-		WebElement checkout = driver.findElementByXPath("//a[@title='Checkout']");
+		WebElement checkout = driver.findElement(By.xpath("//a[@title='Checkout']"));
 		js.executeScript("location.reload()");
 		Thread.sleep(2000);
 		

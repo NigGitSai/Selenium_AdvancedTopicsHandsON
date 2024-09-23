@@ -11,11 +11,13 @@
     "phoneNumbers": [
       {
         "type": "home",
-        "number": "212-555-1234"
+        "number": "212-555-1234",
+        "roamingEnabled": true
       },
       {
         "type": "work",
-        "number": "646-555-5678"
+        "number": "646-555-5678",
+        "roamingEnabled": false
       }
     ],
     "isActive": true

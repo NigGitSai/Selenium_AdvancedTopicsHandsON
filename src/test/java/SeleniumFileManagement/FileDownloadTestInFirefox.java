@@ -1,8 +1,10 @@
 package SeleniumFileManagement;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -28,9 +30,9 @@ public class FileDownloadTestInFirefox {
 		
 		FirefoxDriver driver = new FirefoxDriver(opt);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://letcode.in/file");
-		driver.findElementById("xls").click();
+		driver.findElement(By.id("xls")).click();
 		
 		File folderPath = new File( System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
 		File[] lstFiles = folderPath.listFiles();

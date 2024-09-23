@@ -7,6 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.testng.annotations.AfterClass;
@@ -34,7 +35,7 @@ public class FileUploadPractice2 {
 		File file2 = new File("src/test/resources/tulipgarden.jpg");
 		System.out.println(file.getAbsolutePath());
 		System.out.println(file2.getAbsolutePath());
-		driver.findElementById("file").sendKeys(file.getAbsolutePath());
+		driver.findElement(By.id("file")).sendKeys(file.getAbsolutePath());
 		
 	}
 	
@@ -47,7 +48,7 @@ public class FileUploadPractice2 {
 		
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
 		
-		driver.findElementById("upload-dropbox-zone");
+		driver.findElement(By.id("upload-dropbox-zone"));
 		
 		Robot rb = new Robot();
 		rb.keyPress(KeyEvent.VK_CONTROL);
@@ -56,7 +57,7 @@ public class FileUploadPractice2 {
 		rb.keyRelease(KeyEvent.VK_CONTROL);
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
-		String actName = driver.findElementByClassName("image-card__name").getText();
+		String actName = driver.findElement(By.className("image-card__name")).getText();
 		org.testng.Assert.assertEquals(actName, "tulipgarden.jpg", "Image name uploaded");
 	}
 

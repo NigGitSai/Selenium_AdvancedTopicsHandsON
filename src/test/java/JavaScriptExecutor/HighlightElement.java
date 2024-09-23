@@ -1,5 +1,6 @@
 package JavaScriptExecutor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,17 +22,17 @@ public class HighlightElement {
 		for(int i=0; i<5;i++)
 		{
 		
-		WebElement myAccount = driver.findElementByXPath("//span[text()='My Account']");
+		WebElement myAccount = driver.findElement(By.xpath("//span[text()='My Account']"));
 		
 		
 		js.executeScript("arguments[0].setAttribute('style','background:yellow;border:3px solid red;');",myAccount);
-		WebElement search = driver.findElementByName("search");
+		WebElement search = driver.findElement(By.name("search"));
 		
 		
 		Thread.sleep(2000);
 		js.executeScript("arguments[0].setAttribute('style','background:yellow;border:3px solid red;');", search);
 		}
-		WebElement iPhoneProduct = driver.findElementByXPath("//a[text()='iPhone']/../../../../../div[@class='product-thumb']");
+		WebElement iPhoneProduct = driver.findElement(By.xpath("//a[text()='iPhone']/../../../../../div[@class='product-thumb']"));
 		js.executeScript("arguments[0].setAttribute('style','background:yellow;border:3px solid red');", iPhoneProduct);
 		
 		

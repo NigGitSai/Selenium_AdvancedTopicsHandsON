@@ -6,9 +6,10 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.LocalFileDetector;
@@ -28,17 +29,17 @@ public class FileUpload {
 		WebDriverManager.chromedriver().setup(); 
 		 driver = new ChromeDriver();
 		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	@Test(description = "Single File upload verification" , enabled = false)
 	public void uploadFileForLambaTestSingleFile() throws InterruptedException
 	{
 		
 		driver.get("https://www.lambdatest.com/selenium-playground/upload-file-demo");
-		WebElement chooseFile = driver.findElementById("file");
+		WebElement chooseFile = driver.findElement(By.id("file"));
 		File imageFile = new File("src/test/resources/tulipgarden.jpg");
 		chooseFile.sendKeys(imageFile.getAbsolutePath());
-		String expSuccessfulMsg = driver.findElementById("error").getText();
+		String expSuccessfulMsg = driver.findElement(By.id("error")).getText();
 		System.out.println(imageFile.getAbsolutePath());
 		org.testng.Assert.assertEquals("File Successfully Uploaded",expSuccessfulMsg,"File Successful Message" );
 		Thread.sleep(2000);
@@ -52,7 +53,7 @@ public class FileUpload {
 				
 		driver.get("https://the-internet.herokuapp.com/upload");
 		Thread.sleep(2000);
-		WebElement chooseFile = driver.findElementById("drag-drop-upload");
+		WebElement chooseFile = driver.findElement(By.id("drag-drop-upload"));
 		LocalFileDetector detector = new LocalFileDetector();
 		
 		File imageFile = detector.getLocalFile("src/test/resources/tulipgarden.jpg");
@@ -62,9 +63,9 @@ public class FileUpload {
 		System.out.println(wordFile);
 		chooseFile.sendKeys(imageFile.getAbsolutePath(),"\n",wordFile.getAbsolutePath());
 		Thread.sleep(2000);
-		driver.findElementById("file-submit").click();
-		driver.findElementByXPath("//h3[text()='File Uploaded!']").isDisplayed();
-		String actUploadedFileName = driver.findElementById("uploaded-files").getText().trim();
+		driver.findElement(By.id("file-submit")).click();
+		driver.findElement(By.xpath("//h3[text()='File Uploaded!']")).isDisplayed();
+		String actUploadedFileName = driver.findElement(By.id("uploaded-files")).getText().trim();
 		org.testng.Assert.assertEquals( actUploadedFileName,"tulipgarden.jpg", "Uploaded File name ");
 		
 		
@@ -81,7 +82,7 @@ public class FileUpload {
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel, null);
 		Thread.sleep(2000);
 		
-		driver.findElementByXPath("//*[local-name()='svg' and @class ='css-1kh0tap']").click();
+		driver.findElement(By.xpath("//*[local-name()='svg' and @class ='css-1kh0tap']")).click();
 		
 		Robot rb = new Robot();
 		Thread.sleep(3000);
@@ -97,7 +98,7 @@ public class FileUpload {
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(3000);
-		String fileNameUplaodedAct = driver.findElementByXPath("//input[@name='title']").getAttribute("value");
+		String fileNameUplaodedAct = driver.findElement(By.xpath("//input[@name='title']")).getAttribute("value");
 		org.testng.Assert.assertEquals(fileNameUplaodedAct, "TestDoc.docx", "File Name uploaded");
 		
 		
