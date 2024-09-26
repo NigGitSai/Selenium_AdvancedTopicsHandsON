@@ -18,6 +18,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -35,10 +36,11 @@ WebDriverWait wait;
 	public void setUpBrowser()
 	{
 		WebDriverManager.chromedriver().setup(); 
+		
 		 driver = new ChromeDriver();
 		 wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	@Test(description = "Simple Alert Verification", priority = 0)
@@ -78,6 +80,8 @@ WebDriverWait wait;
 		
 		alert.sendKeys("Test");
 		alert.accept();
+		
+		
 		String actValue = driver.findElement(By.id("myName")).getText();
 		
 		org.testng.Assert.assertEquals(actValue, "Your name is: Test", "Prompt Alert verification");

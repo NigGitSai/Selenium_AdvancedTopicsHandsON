@@ -63,6 +63,7 @@ public class ExcelUtility {
 	{
 		initializeExcel();
 		sheet = workbook.getSheet(sheetName);
+		
 		colNO = -1;
 		colCount = sheet.getRow(0).getLastCellNum();
 		for(int i=0;i<colCount;i++)

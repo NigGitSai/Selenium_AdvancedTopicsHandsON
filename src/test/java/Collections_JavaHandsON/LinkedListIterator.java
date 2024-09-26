@@ -63,7 +63,6 @@ public class LinkedListIterator {
 
 	
 	
-	
 	@Test(priority = 3,enabled = true)
 	public void usingIterator()
 	{

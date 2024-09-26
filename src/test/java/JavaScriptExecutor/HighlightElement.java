@@ -34,7 +34,7 @@ public class HighlightElement {
 		}
 		WebElement iPhoneProduct = driver.findElement(By.xpath("//a[text()='iPhone']/../../../../../div[@class='product-thumb']"));
 		js.executeScript("arguments[0].setAttribute('style','background:yellow;border:3px solid red');", iPhoneProduct);
-		
+
 		
 		driver.quit();
 	}

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssured.DeserializationUsingJaywayJSONPath">
+      <class name="SeleniumInterviewQuestions.ExplicitWait">
         <methods>
-          <include name="deserializeUsingJaywayJSONPath"/>
+          <include name="explicitWaitTest"/>
         </methods>
-      </class> <!-- RestAssured.DeserializationUsingJaywayJSONPath -->
+      </class> <!-- SeleniumInterviewQuestions.ExplicitWait -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

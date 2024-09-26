@@ -3,6 +3,7 @@ package SliderTest;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,8 +28,10 @@ public class VerifySliderRange {
 		WebElement slider = driver.findElement(By.xpath("(//div[@id='slider1']/..//input[@type='range'])[1]"));
 	
 		WebElement range = driver.findElement(By.id("range"));
-		Actions actions = new Actions(driver);
 		
+		Actions actions = new Actions(driver);
+
+	
 		Rectangle rect = slider.getRect();
 		int width = rect.getWidth();
 		int xPos = rect.getX();

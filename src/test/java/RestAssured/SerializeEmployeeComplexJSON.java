@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class ConstructEmployeeComplexJSON {
+public class SerializeEmployeeComplexJSON {
 	
 	@Test
 	public void constructEmployeeComplexJSOn() throws JsonProcessingException

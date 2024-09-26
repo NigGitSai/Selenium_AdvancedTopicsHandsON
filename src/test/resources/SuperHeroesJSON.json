@@ -1,0 +1,231 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Superman",
+      "realName": "Clark Kent",
+      "universe": "DC",
+      "powers": [
+        "Super strength",
+        "Flight",
+        "X-ray vision",
+        "Heat vision",
+        "Heat vision"
+      ],
+      "allies": [
+        {
+          "id": 2,
+          "name": "Batman"
+        },
+        {
+          "id": 3,
+          "name": "Wonder Woman"
+        }
+      ],
+      "movies": [
+        {
+          "id": 1,
+          "title": "Man of Steel",
+          "releaseYear": 2013,
+          "director": "Zack Snyder",
+          "boxOffice": 668045518,
+          "rating": "PG-13"
+        },
+        {
+          "id": 2,
+          "title": "Batman v Superman: Dawn of Justice",
+          "releaseYear": 2016,
+          "director": "Zack Snyder",
+          "boxOffice": 873634919,
+          "rating": "PG-13"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Batman",
+      "realName": "Bruce Wayne",
+      "universe": "DC",
+      "powers": [
+        "Genius-level intellect",
+        "Master martial artist",
+        "Expert detective",
+        "High-tech equipment"
+      ],
+      "allies": [
+        {
+          "id": 1,
+          "name": "Superman"
+        },
+        {
+          "id": 4,
+          "name": "Robin"
+        }
+      ],
+      "movies": [
+        {
+          "id": 3,
+          "title": "Batman Begins",
+          "releaseYear": 2005,
+          "director": "Christopher Nolan",
+          "boxOffice": 373403170,
+          "rating": "PG-13"
+        },
+        {
+          "id": 4,
+          "title": "The Dark Knight",
+          "releaseYear": 2008,
+          "director": "Christopher Nolan",
+            "boxOffice": 1004558444,
+          "rating": "PG-13"
+        },
+        {
+          "id": 5,
+          "title": "The Dark Knight Rises",
+          "releaseYear": 2012,
+          "director": "Christopher Nolan",
+          "boxOffice": 1081041287,
+          "rating": "PG-13"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "realName": "Diana Prince",
+      "universe": "DC",
+      "powers": [
+        "Super strength",
+        "Flight",
+        "Combat skill",
+        "Lasso of Truth",
+        "Immortality"
+      ],
+      "allies": [
+        {
+          "id": 1,
+          "name": "Superman"
+        },
+        {
+          "id": 2,
+          "name": "Batman"
+        }
+      ],
+      "movies": [
+        {
+          "id": 6,
+          "title": "Wonder Woman",
+          "releaseYear": 2017,
+          "director": "Patty Jenkins",
+          "boxOffice": 821847012,
+          "rating": "PG-13"
+        },
+        {
+          "id": 7,
+          "title": "Wonder Woman 1984",
+          "releaseYear": 2020,
+          "director": "Patty Jenkins",
+          "boxOffice": 166500000,
+          "rating": "PG-13"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Spider-Man",
+      "realName": "Peter Parker",
+      "universe": "Marvel",
+      "powers": [
+        "Wall-crawling",
+        "Super strength",
+        "Spider-sense",
+        "Agility",
+        "Web-shooting"
+      ],
+      "allies": [
+        {
+          "id": 5,
+          "name": "Iron Man"
+        },
+        {
+          "id": 6,
+          "name": "Doctor Strange"
+        }
+      ],
+      "movies": [
+        {
+          "id": 8,
+          "title": "Spider-Man: Homecoming",
+          "releaseYear": 2017,
+          "director": "Jon Watts",
+          "boxOffice": 880166924,
+          "rating": "PG-13"
+        },
+        {
+          "id": 9,
+          "title": "Spider-Man: Far From Home",
+          "releaseYear": 2019,
+          "director": "Jon Watts",
+          "boxOffice": 1131927996,
+          "rating": "PG-13"
+        },
+        {
+          "id": 10,
+          "title": "Spider-Man: No Way Home",
+          "releaseYear": 2021,
+          "director": "Jon Watts",
+          "boxOffice": 1921752432,
+          "rating": "PG-13"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Iron Man",
+      "realName": "Tony Stark",
+      "universe": "Marvel",
+      "powers": [
+        "Genius-level intellect",
+        "Powered armor suit",
+        "Energy repulsors",
+        "Flight"
+      ],
+      "allies": [
+        {
+          "id": 4,
+          "name": "Spider-Man"
+        },
+        {
+          "id": 7,
+          "name": "Captain America"
+        }
+      ],
+      "movies": [
+        {
+          "id": 11,
+          "title": "Iron Man",
+          "releaseYear": 2008,
+          "director": "Jon Favreau",
+          "boxOffice": 585174222,
+          "rating": "PG-13"
+        },
+        {
+          "id": 12,
+          "title": "Iron Man 2",
+          "releaseYear": 2010,
+          "director": "Jon Favreau",
+          "boxOffice": 623933331,
+          "rating": "PG-13"
+        },
+        {
+          "id": 13,
+          "title": "Iron Man 3",
+          "releaseYear": 2013,
+          "director": "Shane Black",
+          "boxOffice": 1214811252,
+          "rating": "PG-13"
+        }
+      ]
+    }
+  ]
+}

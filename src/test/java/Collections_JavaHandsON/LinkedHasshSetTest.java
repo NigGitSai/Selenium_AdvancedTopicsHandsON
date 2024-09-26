@@ -39,6 +39,8 @@ public class LinkedHasshSetTest {
 		{
 			System.out.println(iterator.next());
 		}
+		
+		
 	}
 
 }

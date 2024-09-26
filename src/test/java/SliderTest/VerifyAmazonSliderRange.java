@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -26,8 +27,7 @@ public class VerifyAmazonSliderRange {
 		Thread.sleep(4000);
 		WebElement slider = driver.findElement(By.xpath("(//input[contains(@id,'p_36/range-slider_slider-item_lower-bound')])[1]"));
 		
-		
-		
+	
 		int desiredValue = 100;
 		
 		String minValueSet = slider.getAttribute("aria-valuetext").replace("$", "");

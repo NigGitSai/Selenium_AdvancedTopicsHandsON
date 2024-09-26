@@ -28,6 +28,8 @@ public class FileDownload {
 		 ChromeOptions opt = new ChromeOptions();
 		 opt.setExperimentalOption("prefs", prefs);
 		
+		 
+		
 		 WebDriverManager.chromedriver().setup(); 
 		 driver = new ChromeDriver(opt);
 		 driver.manage().window().maximize();

@@ -30,6 +30,7 @@ public class StringReverse {
 	{
 		String text = "WELCOME";
 		StringBuffer bf = new StringBuffer(text);
+		
 		String reverse = String.valueOf(bf.reverse());
 		System.out.println("Given String "+text);
 		System.out.println("Reversed String : "+reverse);

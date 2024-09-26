@@ -42,6 +42,8 @@ public class CalendarDatePickerTest {
 		String currentDateMonth = driver.findElement(By.className("ui-datepicker-title")).getText();
 		SimpleDateFormat monthFormat = new SimpleDateFormat("MMM yyyy");
 		Date currentMonthDt =  monthFormat.parse(currentDateMonth);
+		
+		
 		cal.setTime(currentMonthDt);
 		 
 		int actMonth = cal.get(Calendar.MONTH);
