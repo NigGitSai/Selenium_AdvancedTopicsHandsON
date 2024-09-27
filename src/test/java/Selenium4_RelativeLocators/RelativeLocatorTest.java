@@ -7,7 +7,6 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class RelativeLocatorTest {
 
 	@Test
