@@ -48,6 +48,7 @@ public class CalendarDatePickerTest {
 		 
 		int actMonth = cal.get(Calendar.MONTH);
 		int actYear = cal.get(Calendar.YEAR);
+		System.out.println("Actual Month :"+actMonth);
 		 JavascriptExecutor executor = (JavascriptExecutor)driver;
 		if(targetMonth< actMonth || targetYear < actYear)
 		{
