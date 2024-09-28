@@ -58,6 +58,8 @@ public class RelativeLocatorTest {
 		
 		driver.findElement(RelativeLocator.with(By.tagName("a")).above(testWisely).below(compediumDev)).click();
 		System.out.println(driver.getCurrentUrl());
+		
+		
 		driver.quit();
 	}
 }
