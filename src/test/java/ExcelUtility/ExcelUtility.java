@@ -4,7 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -29,6 +31,12 @@ public class ExcelUtility {
 	static boolean writeDataStatus;
 	static CellType cellType;
 	static FileOutputStream fw;
+	static Iterator<Row> rows;
+	static Iterator<Cell> cellValues;
+	static String columnName;
+
+	protected static LinkedHashMap<String,Object> hm;
+
 	public ExcelUtility(String filePath)
 	{
 		this.filePath = filePath;
@@ -212,7 +220,7 @@ public class ExcelUtility {
 	public String getRequiredDataUsingIterator(String sheetName,String rowData,String columnName) throws IOException
 	{
 		initializeExcel();
-	sheet = workbook.getSheet(sheetName);
+		sheet = workbook.getSheet(sheetName);
 
 		Iterator<Row> rows= sheet.iterator();
 
@@ -273,5 +281,65 @@ public class ExcelUtility {
 		}
 		closeExcelWorkBook();
 		return String.valueOf(cellValue);
+	}
+
+	public LinkedHashMap<String,Object> returnHashMapForExcelRow(String sheetName, String rowInfo) throws IOException
+	{
+		initializeExcel();
+		hm = new LinkedHashMap<String, Object>();
+		sheet = workbook.getSheet(sheetName);
+
+		rows= sheet.rowIterator();
+		Iterator<Cell> columns =  sheet.getRow(0).cellIterator();
+
+		outerLoop:
+			while(rows.hasNext())
+			{
+				row = (XSSFRow) rows.next();
+				cell = row.getCell(0);
+				if(cell.getStringCellValue().equals(rowInfo))
+				{
+					cellValues = row.cellIterator();
+					break outerLoop;
+				}
+			}
+
+		while(columns.hasNext())
+		{
+			columnName = columns.next().getStringCellValue();
+			System.out.println("Column Name "+columnName);
+			cell = (XSSFCell) cellValues.next();
+			cellType = cell.getCellType();
+			switch(cellType)
+			{
+			case STRING:
+			{
+				cellValue  = cell.getStringCellValue();
+				break;
+			}
+			case NUMERIC:
+			{
+				cellValue = cell .getNumericCellValue();
+				break;
+			}
+			case BOOLEAN:
+			{
+				cellValue = cell.getBooleanCellValue();
+				break;
+			}
+			default :
+			{
+				System.out.println(" no matching type");
+				break;
+			}
+			
+			}
+			System.out.println("CellValue : "+cellValue);
+			hm.put(columnName,cellValue);
+
+
+		}
+
+		return hm;
 	}
 }
