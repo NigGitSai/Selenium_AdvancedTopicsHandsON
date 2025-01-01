@@ -84,6 +84,12 @@
 </dependency>
 
 <dependency>
+    <groupId>org.jboss.aerogear</groupId>
+    <artifactId>aerogear-otp-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+<dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
     <version>4.1.2</version>
