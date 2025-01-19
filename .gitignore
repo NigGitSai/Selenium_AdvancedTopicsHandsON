@@ -1,6 +1,5 @@
-target/
 .project
 .classpath
 test-output/
-/Reports/
 .settings/
+target/
