@@ -105,6 +105,8 @@ public class SerializeEmployeeComplexJSON {
 		dependents.add(dependents1);
 		dependents.add(dependents2);
 		
+		dependents = Arrays.asList(dependents1,dependents2);
+		
 		
 		SkillsPOJO skills1 = new SkillsPOJO();
 		
