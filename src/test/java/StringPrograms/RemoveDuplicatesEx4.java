@@ -15,6 +15,8 @@ public class RemoveDuplicatesEx4 {
         {   
             // store the character available at ith index in the string  
             char charAtPosition = str.charAt(i);   
+            
+           
                 System.out.println("charAtPosition :"+charAtPosition);
                 System.out.println("newstr.indexOf(charAtPosition) :"+newstr.indexOf(charAtPosition));
             // check the index of the charAtPosition. If the indexOf() method returns true add it to the resuting string  
