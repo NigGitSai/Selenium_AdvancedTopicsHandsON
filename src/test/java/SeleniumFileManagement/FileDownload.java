@@ -2,6 +2,7 @@ package SeleniumFileManagement;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -37,7 +38,7 @@ public class FileDownload {
 		
 	}
 	
-	@Test(description ="Verify file download")
+	@Test(description ="Verify file download",enabled = false)
 	public void verifyFileDownload()
 	{
 		driver.get("https://letcode.in/file");
@@ -56,6 +57,24 @@ public class FileDownload {
 			}
 			
 		}
+		
+		
+	}
+	
+	@Test(description ="Verify file download" , enabled = true)
+	public void verifyFileDownloadUsingJava8() throws Exception
+	{
+		driver.get("https://letcode.in/file");
+		Thread.sleep(2000);
+		driver.findElement(By.id("xls")).click();
+		
+		File folderPath = new File( System.getProperty("user.dir")+File.separator+"src\\test\\resources\\Downloads");
+		
+		Arrays.stream(folderPath.listFiles())
+		.filter(file-> file.getName().equalsIgnoreCase("sample.xlsx"))
+		.findFirst()
+		.ifPresent(File::delete);
+		
 		
 		
 	}
