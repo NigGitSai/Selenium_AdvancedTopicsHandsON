@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import ComparableInterfaceUnderstanding.Mobile;
 
-public class MainRunner {
+public class SortUsingJava8Understanding_MainRunner {
 	
 	static List<Dish> menu = null;
 	
