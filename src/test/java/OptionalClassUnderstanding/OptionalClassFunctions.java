@@ -57,5 +57,59 @@ public class OptionalClassFunctions {
 		System.out.println("Or Else example when not null "+nameIs);
 	}
 	
+	@Test
+	public void testGetMwthod()
+	{
+		Optional<String> optionalStr =     Optional.of("John");
+		System.out.println("Optional get method example "+optionalStr.get());
+		
+		String name = "";
+		Optional<String> optionalEmptyStr =     Optional.of(name);
+		
+		System.out.println("Optional get method example no value for String variable  "+optionalEmptyStr.get());
+		
+		List<String> lst = new 	ArrayList<String>();
+		Optional<List<String>> optionalList =       Optional.of(lst);
+		
+		
+		System.out.println("Optional get method example no value added for list : "+optionalList.get());
+	}
+	
+	@Test
+	public void testOrElseGetWhenValueIsNotNull()
+	{
+		String name = "Daisy";
+		 String result = Optional.ofNullable(name).orElseGet(()->"Daisy is not present so return");
+		 System.out.println("Or Else get method ex when value is not null :"+name);
+		
+	}
+	
+	@Test
+	public void testOrElseGetWhenValueIsNull()
+	{
+		String name = null;
+		 String result = Optional.ofNullable(name).orElseGet(()->"Daisy is not present so return");
+		 System.out.println("Or Else get method ex when value is  null :"+result);
+		
+	}
+	
+	@Test
+	public void testOrElseThrowWhenValueIsNull()
+	{
+		String name = null;
+		 String result = Optional.ofNullable(name).orElseThrow(()->new IllegalArgumentException());
+		 System.out.println("Or Else throw method ex when value is  null :"+result);
+		
+	}
+	
+	@Test
+	public void testOrElseThrowWhenValue()
+	{
+		String name = "Daisy";
+		 String result = Optional.ofNullable(name).orElseThrow(()->new IllegalArgumentException());
+		 System.out.println("Or Else throw method ex when value is not null  :"+result);
+		
+	}
+	
 	
 }
