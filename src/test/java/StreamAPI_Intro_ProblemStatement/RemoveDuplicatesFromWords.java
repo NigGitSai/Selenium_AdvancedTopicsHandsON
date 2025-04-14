@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class RemoveDuplicatesFromWords {
 
 	@Test
-	public void removeDuplicates()
+	public void removeDuplicatesUsingTraditionalWay()
 	{
 		List<String> words =  Arrays.asList("Caara","Earar","Applep");
 		List<String> wordsWoDuplicatesChar = new ArrayList<String>();
@@ -42,5 +42,23 @@ public class RemoveDuplicatesFromWords {
 		 
 		 
 		 System.out.println(wordsWoDuplicatesChar);
+	}
+	
+	@Test
+	public void removeDuplicatesusingJava8()
+	{
+		List<String> words =  Arrays.asList("Caara","Earar","Applep");
+		
+		List<String> wordsWoDuplicates =	words.stream()
+        .map(word -> word.chars() // Convert to IntStream
+            .mapToObj(c -> String.valueOf((char) c)) // Convert int to String
+            .distinct() // Remove duplicates (or use collect with LinkedHashSet to preserve order)
+            .collect(Collectors.joining())) // Join back into a word
+        .collect(Collectors.toList());
+		
+		System.out.println("Words without duplicates ");
+		System.out.println(wordsWoDuplicates);
+		
+		
 	}
 }
