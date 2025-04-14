@@ -1,6 +1,7 @@
 package StringPrograms;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.testng.annotations.Test;
@@ -11,17 +12,18 @@ public class RemoveDuplicates {
 	public void removeDuplicatesInString()
 	{
 		String givenWord = "Tomorrow";
-		String finalWord = givenWord;
+		String finalWord = "";
 		System.out.println("Before removing given word :"+givenWord);
-		Set<Character> set = new HashSet<Character>();
+		LinkedHashSet<Character> set = new LinkedHashSet<Character>();
 		char ch;
 		for(int i=0;i<givenWord.length();i++)
 		{
 			ch = givenWord.charAt(i);
-			if(set.add(ch)==false)
-			{
-				finalWord = finalWord.replaceAll(String.valueOf(ch), "");
-			}
+			set.add(ch);
+		}
+		for(Character c:set)
+		{
+			finalWord =finalWord+c;
 		}
 		
 		System.out.println("After removing duplicate words :"+finalWord);
