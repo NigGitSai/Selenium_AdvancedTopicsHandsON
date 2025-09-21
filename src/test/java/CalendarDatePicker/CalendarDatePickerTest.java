@@ -56,6 +56,7 @@ public class CalendarDatePickerTest {
 			  executor.executeScript("arguments[0].click();", prev);
 			  actMonth = cal.get(Calendar.MONTH);
 			  actYear = cal.get(Calendar.YEAR);
+			 
 		  }
 		  while(targetMonth>actMonth || targetYear>actYear)
 		  {

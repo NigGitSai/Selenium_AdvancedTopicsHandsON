@@ -1,6 +1,9 @@
 package ArraysPrograms;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import org.testng.annotations.Test;
 
@@ -34,6 +37,12 @@ public class SmallestNdLargest {
 		System.out.println("");
 		System.out.println("Smallest element in Array :"+a[0]);
 		System.out.println("Largest element in Array :"+a[a.length-1]);
+		
+		Arrays.sort(a);
+		
+		List<Integer> intList = new ArrayList<Integer>();
+		
+		Collections.sort(null);
 		
 	}
 	
