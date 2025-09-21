@@ -1,4 +1,4 @@
-package Streams_API_Examples;
+package CollectorsGrouping_Streams_Examples;
 
 import java.util.Arrays;
 import java.util.List;
