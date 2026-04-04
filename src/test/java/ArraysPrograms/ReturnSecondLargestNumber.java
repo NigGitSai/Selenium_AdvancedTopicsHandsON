@@ -42,6 +42,7 @@ public class ReturnSecondLargestNumber {
 		int[] given = {5, 1, 9, 2, 8};
 		
 		Arrays.sort(given);
+		
 		System.out.println("From Method 2 : Second smallest element in the given array is  "+given[1]);
 	}
 	
