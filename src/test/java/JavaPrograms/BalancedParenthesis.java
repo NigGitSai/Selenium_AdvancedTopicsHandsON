@@ -7,7 +7,7 @@ public class BalancedParenthesis {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String given ="{[[])}";
+		String given ="{([])}";
 		if(given.length()%2!=0)
 		{
 			System.out.println("Cannot verify balanced paranthesis");
