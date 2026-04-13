@@ -16,6 +16,10 @@ public class MoveZerosToEnd {
 				break;
 			}
 		}
+		if(j==-1) {
+			System.out.println("There are no zeros in the array");
+			return;
+		}
 		
 		for(int i=j+1;i<arr.length;i++) {
 				if(arr[i] != 0) {
