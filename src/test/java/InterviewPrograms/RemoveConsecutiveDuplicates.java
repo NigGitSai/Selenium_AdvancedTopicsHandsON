@@ -27,8 +27,9 @@ public class RemoveConsecutiveDuplicates {
 				}
 				result.append(given.charAt(given.length()-1));
 
-				opList.add(result.toString());
+				
 			}
+			opList.add(result.toString());
 		}
 		System.out.println(opList);
 
